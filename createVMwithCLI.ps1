@@ -1,0 +1,1 @@
+az vm create --resource-group "myResourceGroup" --name "myVM" --size "Standard_E4s_v5" --image "Canonical:UbuntuServer:18.04-LTS:18.04.201806130" --public-ip-sku "Standard" --admin-username "username" --admin-password "password"
