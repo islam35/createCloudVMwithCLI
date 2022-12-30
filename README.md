@@ -15,7 +15,7 @@ VM operations and definitions with basic commands in Azure and AWS (Amazon) Clou
   b- Using with Azure CLI commands;
     Download exe from https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
     
-3- 
+3- AWS Cloud CLI download and install from https://awscli.amazonaws.com/AWSCLIV2.msi
 
 ----Creation VM Steps----
 1 - For Azure;
@@ -31,4 +31,20 @@ VM operations and definitions with basic commands in Azure and AWS (Amazon) Clou
         Run "getVMLists.ps1" script
         
 2 - For AWS;
-   /aws/service/ami-amazon-linux-latest/al2022-ami-kernel-default-x86_64
+  It is necessary to create one security group at least. If you have it, you can skip step "a".
+    a - To Create security group(you can change name and location)
+      "aws ec2 create-security-group --group-name demo-sg --description "AWS ec2 CLI Demo SG""
+    b - Create VM steps;
+        "aws ec2 run-instances --image-id ami-xxxxxxxx --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8"
+    c - Important: If the VM cannot be created with these two steps, the id should be created from the settings under the user profile picture from the aws portal           and see this link for other settings.
+      
+More infos: 
+  For AWS;
+      https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2.html
+      https://devopscube.com/use-aws-cli-create-ec2-instance/
+      https://www.youtube.com/watch?v=H6twNlwj9ig
+  
+  For Azure;
+      https://learn.microsoft.com/tr-tr/azure/virtual-machines/windows/quick-create-cli?source=recommendations
+      https://learn.microsoft.com/tr-tr/cli/azure/vm?view=azure-cli-latest
+      https://www.youtube.com/watch?v=a-V708bIsuA
