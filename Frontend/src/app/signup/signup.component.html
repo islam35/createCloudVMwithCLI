@@ -1,0 +1,50 @@
+<mat-card>
+    <mat-card-content>
+      <div class="header">
+        <P>Sign Up to IaaC </P>
+      </div>
+      <form (ngSubmit)="signUp()" name="SignUpForm" [formGroup]="signUpForm" >
+        <div class="emailInput">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              formControlName="email"
+              matInput
+              placeholder="Enter email address" required
+              (ngModelChange)="onChange()"
+            />
+            <mat-error *ngIf="!signUpForm.controls['email'].valid">
+                Email is required
+              </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required (ngModelChange)="onChange()"/>
+            <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>
+                {{hide ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+        </button>
+        <mat-error *ngIf="!signUpForm.controls['password'].valid">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+        <div>
+          <mat-label *ngIf="success">
+            <a>Signup Successfull</a>
+          </mat-label> 
+        </div>
+        </div>  
+        <div class="col width">
+          <a class="text-link" class="aLink" routerLink="/login" >Login</a>
+      <button class="btn" mat-flat-button color="primary">SignUp</button>
+    </div>       
+
+        
+      </form>
+    </mat-card-content>
+  </mat-card>

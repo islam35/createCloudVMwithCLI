@@ -1,0 +1,51 @@
+<mat-card>
+    <mat-card-content>
+      <div class="header">
+        <P>Sign In to Your Account </P>
+      </div>
+      <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+        <div class="emailInput">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              formControlName="email"
+              matInput
+              placeholder="Enter email address" required
+              (ngModelChange)="onChange()"
+            />
+            <mat-error *ngIf="!loginForm.controls['email'].valid">
+                Email is required
+              </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input formControlName="password" matInput [type]=" hide ? 'password' : 'text'" required (ngModelChange)="onChange()"/>
+              <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide Password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>
+                {{hide ? 'visibility_off' : 'visibility'}}
+              </mat-icon>
+              </button>
+              <mat-error *ngIf="!loginForm.controls['password'].valid">
+                Password is required
+              </mat-error>
+        </mat-form-field>
+        </div>
+        <mat-error *ngIf="loginFailed">
+                        Login failed!<br> 
+          Please check your credentials and Login again. 
+        </mat-error>
+        <br>
+        <div class="col">
+          <a class="text-link" class="bLink" routerLink="/forgotpassword">Forgot Password?</a>
+          <a class="text-link" class="aLink" routerLink="/signup" >Sign Up</a>
+      <button class="btn" mat-flat-button color="primary" >Login</button>
+    </div>
+
+     
+      </form>
+    </mat-card-content>
+  </mat-card>

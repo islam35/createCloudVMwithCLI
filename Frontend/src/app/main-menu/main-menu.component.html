@@ -1,0 +1,89 @@
+<div class="mainmenu-container">
+    <div class="mainmenu-container01">
+      <header data-thq="thq-navbar" class="mainmenu-navbar-interactive">
+        <div id="logom" >
+          <img id="img" src="assets/img/logov5.jpg" alt="logo">
+        </div>
+        <div class="row " id="row"> 
+          <span class="col-xs-1 center-block font-weight-bold fs-2">IAAC Common Cloud Management Platform</span>
+        </div>
+        <div
+          data-thq="thq-navbar-nav"
+          data-role="Nav"
+          class="mainmenu-desktop-menu"
+        >
+          <nav
+            data-thq="thq-navbar-nav-links"
+            data-role="Nav"
+            class="mainmenu-nav"
+          >
+            <span><b>Connected Clouds:</b></span> 
+            <span class="mainmenu-text02"><b>AWS</b></span>
+            <div class="mainmenu-container02"></div>
+            <span class="mainmenu-text03"><b>Azure</b></span>
+            <div class="mainmenu-container03"></div>
+            <span class="mainmenu-text04"><b>Google</b></span>
+            <div class="mainmenu-container04"></div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <div class="mainmenu-container05">
+      <div class="mainmenu-container06">
+      
+        <div class="mainmenu-container07">
+          
+          <div>
+            <app-list></app-list>
+  
+          </div>
+        </div>
+      </div>
+      <div class="mainmenu-container09" style="font-family: Lucida Console, Courier New, monospace;"> 
+        <br> 
+        <b>
+        <p style="font-size: 25px;">Cloud Overview</p>
+        </b>  
+        <br>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="assets/img/aws.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="font-size: 25px;">AWS Cloud Overview</h5>
+                <p class="card-text">You have {{awsVMs.length}} VM instance(s)</p>
+                <a routerLink="/vmcustomise" class="card-link">Create VM</a>
+                <a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/run-instances.html"class="card-link"
+                  target="_blank" rel="noopener noreferrer">More details
+                </a>
+                <!--                  
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                -->
+              </div>
+            </div>
+          </div>
+        </div><br>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="assets/img/azure.jpg" class="card-img" alt="azure">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="font-size: 25px;">Azure Cloud Overview</h5>
+                <p class="card-text">You have {{azureVMs.length}} VM instance(s)</p>
+                <a routerLink="/vmcustomise" class="card-link">Create VM</a>
+                <a href="https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvm?view=azps-9.1.0" class="card-link"
+                  target="_blank" rel="noopener noreferrer">More details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  

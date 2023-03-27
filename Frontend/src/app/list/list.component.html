@@ -1,0 +1,62 @@
+
+
+<!--
+<div class="listcenter">
+    <div class="listhead"><b>AWS VM's</b></div>
+    <div class="list-group" *ngFor="let instance of awsVMs">
+        <li class="list-item list-group-item list-group-item-action"><a href="" (click)="getVMDetails(instance.vmInstanceId, 'AWS')"
+                routerLink="/vmdetails">Instance: {{instance.vmName}} </a> </li>
+    </div>
+    <div class="listcenter">
+        <div class="listhead"><b>AZURE VM's</b></div>
+            <div class="list-group" *ngFor="let instance of azureVMs">
+            <li class="list-item list-group-item list-group-item-action">
+                <a href="" (click)="getVMDetails(instance.vmInstanceId, 'Azure')" routerLink="/vmdetails">Instance: {{instance.vmName}} </a>
+            </li>
+        </div>
+    </div>
+-->
+
+    <div class="nav-side-menu">
+        <div routerLink="/mainmenu" class="brand">Main Menu</div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+      
+            <div class="menu-list">
+      
+                <ul id="menu-content" class="menu-content collapse out">
+                    
+    <li routerLink="/vmcustomise" data-toggle="collapse" data-target="#products" class="collapsed active" id="UI" (click)=collapseAction()>
+      <a><i routerLink="/vmcustomise" class="fa fa-gift fa-lg"></i><span > Virtual Machines </span>
+        <span class="arrow"></span></a>
+    </li>
+    <li data-toggle="collapse" data-target="#products" class="collapsed  " routerLink="/vmdetails"
+      id="UI" (click)=collapseAction3()>
+      <a><i class="fa fa-user fa-lg ml-2"></i><span> VM Instances </span> <span class="arrow"></span></a>
+    </li>
+    
+                    <li data-toggle="collapse" data-target="#service" class="collapsed " (click)=collapseAction1()>
+                      <a ><i class="fa fa-globe fa-lg"></i> Services </a>
+                    </li>  
+                    
+    
+    
+                    <li data-toggle="collapse" data-target="#new" class="collapsed" (click)=collapseAction2()>
+                      <a  ><i routerLink="/settings" class="fa fa-user fa-lg"></i > <span routerLink="/settings"> Settings</span> <span class="arrow"></span></a>
+                    </li>
+                    <ul class="sub-menu collapse" id="new" [className]="collapse2 ? 'sub-menu' : 'sub-menu  collapse'">
+                      <li>AWS</li>
+                      <li>AZURE</li>
+                      <li>GOOGLE</li>
+                    </ul>
+    
+    
+                     
+    
+                     <li>
+                      <a >
+                      <i class="fa fa-users fa-lg"></i> Network
+                      </a>
+                    </li>
+                </ul>
+         </div>
+    </div>
