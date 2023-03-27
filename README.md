@@ -1,6 +1,7 @@
 # createCloudVMwithCLI
-VM operations and definitions with basic commands in Azure and AWS (Amazon) Clouds with using PowerShell and CLI.
+The purpose of the project: In Azure and AWS Cloud, it is to find the best result by comparing the price according to the user requirements and to create VM instances instead of the user when requested. I was part of a 4 people development team. I took part in every step of a project where all the steps such as idea, solution, design and development belong to us.
 
+VM operations and definitions with basic commands in Azure and AWS (Amazon) Clouds with using PowerShell and CLI.
 ----Before Creation VM Steps----
 
 1- Sign up Azure or AWS (Amazon) cloud.
